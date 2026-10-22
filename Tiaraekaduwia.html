@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiara Eka Duwi Agustin - Portofolio PKL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeBg: '#f0fdf4',
+                        themeCard: '#ffffff',
+                        themePrimary: '#0d9488',
+                        themeSecondary: '#10b981',
+                        themeDark: '#0f766e',
+                        themeLight: '#ccfbf1',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f0fdf4;
+            color: #374151;
+            background-image: 
+                radial-gradient(#a7f3d0 1px, transparent 1px), 
+                radial-gradient(#a7f3d0 1px, #f0fdf4 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .theme-card {
+            background: #ffffff;
+            border: 2px solid #a7f3d0;
+            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.08);
+            transition: all 0.3s ease-in-out;
+        }
+        .theme-card:hover {
+            transform: translateY(-5px);
+            border-color: #0d9488;
+            box-shadow: 0 15px 30px -5px rgba(13, 148, 136, 0.18);
+        }
+        .theme-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 2px solid #a7f3d0;
+        }
+    </style>
+</head>
+<body class="selection:bg-teal-200 selection:text-teal-900">
+
+    <!-- Navbar -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl theme-nav rounded-full z-50 py-3 px-6 flex justify-between items-center shadow-md">
+        <a href="#" class="font-extrabold text-lg flex items-center gap-2">
+            <span class="text-teal-600">🌱</span> <span class="bg-gradient-to-r from-teal-700 to-emerald-600 bg-clip-text text-transparent">Tiara Eka Duwi Agustin</span>
+        </a>
+        <div class="hidden md:flex gap-6 font-semibold text-sm text-gray-600">
+            <a href="#about" class="hover:text-teal-600 transition">Tentang Saya</a>
+            <a href="#skills" class="hover:text-teal-600 transition">Keahlian</a>
+            <a href="#certificates" class="hover:text-teal-600 transition">Sertifikat</a>
+            <a href="#company" class="hover:text-teal-600 transition">Tempat PKL</a>
+            <a href="#contact" class="hover:text-teal-600 transition">Kontak</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-xl text-teal-600 focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#f0fdf4]/95 z-40 flex flex-col items-center justify-center gap-6 text-xl font-bold hidden md:hidden">
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl text-gray-400 hover:text-teal-600">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#about" class="mobile-link hover:text-teal-600">Tentang Saya</a>
+        <a href="#skills" class="mobile-link hover:text-teal-600">Keahlian</a>
+        <a href="#certificates" class="mobile-link hover:text-teal-600">Sertifikat</a>
+        <a href="#company" class="mobile-link hover:text-teal-600">Tempat PKL</a>
+        <a href="#contact" class="mobile-link hover:text-teal-600">Kontak</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-32 pb-16 px-6 md:px-12">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block bg-emerald-100 text-teal-800 border border-emerald-300 font-bold px-4 py-1.5 rounded-full text-xs tracking-wide">
+                    🌿 SISWA MAGANG / PKL • WEB DEVELOPER
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-800">
+                    Halo, Saya <br><span class="bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-500 bg-clip-text text-transparent">Tiara Eka Duwi Agustin</span>
+                </h1>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                Saya Adalah Siswa SMKN 8 jember,jurusan Rekayasa Perangkat Lunak (RPL) yang siap mengikuti Praktik Kerja Lapangan. Fokus pada pengembangan website, logika backend PHP, database MySQL, dan tampilan antarmuka modern. ✨
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-teal-600 text-white font-bold px-6 py-3 rounded-2xl hover:bg-teal-700 transition shadow-lg shadow-teal-200">
+                        Hubungi Saya 📩
+                    </a>
+                    <a href="#certificates" class="border-2 border-teal-600 text-teal-700 font-bold px-6 py-3 rounded-2xl shadow-sm hover:bg-teal-50 transition duration-300">
+                        Lihat Sertifikat 📜
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Foto Profil -->
+            <div class="flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden theme-card p-2 bg-white">
+                    <img src="profil3.jpeg" alt="Foto Profil Tiara Eka Duwi Agustin" class="w-full h-full object-cover rounded-2xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Tentang <span class="text-teal-600">Saya</span> 🍃</h2>
+                <p class="text-gray-500 text-sm">Mengenal lebih dekat kesiapan saya menjalani masa PKL.</p>
+            </div>
+            <div class="theme-card p-8 md:p-10 rounded-3xl text-gray-600 text-base md:text-lg leading-relaxed text-center space-y-4">
+                <p>
+                    Saya adalah seorang siswi yang memiliki ketertarikan tinggi di bidang teknologi dan pengembangan web. Berbekal pembelajaran di sekolah dan pelatihan pemrograman mandiri, saya terbiasa membangun struktur web yang rapi, efisien, dan responsif.
+                </p>
+                <p class="text-sm text-gray-500">
+                    Menghadapi kegiatan Praktik Kerja Lapangan (PKL), saya sangat antusias untuk terus belajar, beradaptasi dengan lingkungan kerja profesional, serta memberikan kontribusi nyata bagi tim dan perusahaan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-12 bg-emerald-50/60">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Keahlian & <span class="text-teal-600">Kecakapan Teknis</span> 🛠️</h2>
+                <p class="text-gray-500 text-sm">Teknologi dan perangkat lunak yang saya kuasai.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- HTML5 & CSS3 -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">FRONTEND</span>
+                            <span class="text-xs text-teal-600 font-bold">95%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">HTML5 & CSS3</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Penyusunan struktur dokumen web semantik, styling layout modern, dan Flexbox/Grid.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">CSS FRAMEWORK</span>
+                            <span class="text-xs text-teal-600 font-bold">88%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Tailwind CSS</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Pembuatan desain antarmuka yang cepat, fleksibel, responsif, dan mudah disesuaikan.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <!-- PHP & MySQL -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">BACKEND & DATABASE</span>
+                            <span class="text-xs text-teal-600 font-bold">82%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">PHP & MySQL</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Pengelolaan logika server, operasi CRUD, penanganan form, dan skema database relasional.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 82%"></div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">UI FRAMEWORK</span>
+                            <span class="text-xs text-teal-600 font-bold">85%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Bootstrap</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Pemanfaatan komponen standar UI dan grid system untuk prototipe tampilan web.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Basic -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">INTERAKTIVITAS</span>
+                            <span class="text-xs text-teal-600 font-bold">78%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">JavaScript</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Manipulasi DOM interaktif, pemrosesan event, dan validasi form sederhana.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 78%"></div>
+                    </div>
+                </div>
+
+                <!-- Java Fundamental -->
+                <div class="theme-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-2.5 py-1 rounded-md font-bold">OOP</span>
+                            <span class="text-xs text-teal-600 font-bold">80%</span>
+                        </div>
+                        <h3 class="font-extrabold text-lg text-gray-800">Java Fundamental</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Pemahaman konsep dasar Pemrograman Berorientasi Objek (OOP) dan logika algoritma dasar.</p>
+                    </div>
+                    <div class="w-full bg-teal-100 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-extrabold text-gray-800">Sertifikat & <span class="text-teal-600">Sertifikasi</span> 📜</h2>
+                <p class="text-gray-500 text-sm">Bukti kelulusan dan kompetensi yang telah saya ikuti.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sertifikat 1 -->
+                <div class="theme-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-3 py-1 rounded-full font-bold">GETSKILL</span>
+                            <span class="text-xs text-gray-400">Sertifikat Resmi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Java Fundamental Programming</h3>
+                        <p class="text-gray-600 text-sm">Sertifikasi kelulusan dalam memahami dasar-dasar sintaks dan logika pemrograman Java.</p>
+                    </div>
+                    <div class="w-full h-52 bg-emerald-50 rounded-2xl border-2 border-emerald-200 overflow-hidden flex items-center justify-center p-2">
+                        <img src="sertifikat1.jpeg" alt="Sertifikat Java Fundamental" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div class="theme-card rounded-3xl overflow-hidden p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-emerald-100 text-teal-800 px-3 py-1 rounded-full font-bold">GETSKILL</span>
+                            <span class="text-xs text-gray-400">Sertifikat Resmi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Front End Web dengan Bootstrap</h3>
+                        <p class="text-gray-600 text-sm">Sertifikasi perancangan dan pembuatan antarmuka halaman web yang responsif.</p>
+                    </div>
+                    <div class="w-full h-52 bg-emerald-50 rounded-2xl border-2 border-emerald-200 overflow-hidden flex items-center justify-center p-2">
+                        <img src="sertifikat.png" alt="Sertifikat Front End Web" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="py-16 px-6 md:px-12 bg-emerald-50/60">
+        <div class="max-w-4xl mx-auto theme-card rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-white">
+            <div class="flex justify-center">
+                <div class="w-32 h-32 bg-emerald-50 border-2 border-emerald-200 rounded-2xl flex items-center justify-center text-5xl">
+                    🏢
+                </div>
+            </div>
+            <div class="md:col-span-2 space-y-3 text-center md:text-left">
+                <span class="bg-emerald-100 text-teal-800 font-bold px-3 py-1 rounded-lg text-xs">Rencana Penempatan PKL</span>
+                <h3 class="text-2xl font-extrabold text-gray-800">[Nama Perusahaan / Instansi]</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Siap berkontribusi aktif pada divisi <strong class="text-teal-700">Teknologi Informasi / Web Development</strong> serta mengikuti seluruh aturan dan arahan pembimbing di tempat magang.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 md:px-12">
+        <div class="max-w-3xl mx-auto theme-card rounded-3xl p-8 md:p-12 text-center space-y-8 bg-white">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-extrabold text-gray-800">Hubungi Saya 📬</h2>
+                <p class="text-gray-500 text-sm">Punya pertanyaan atau informasi seputar magang PKL? Silakan hubungi langsung via WhatsApp & Instagram.</p>
+            </div>
+
+            <!-- Tombol Kontak Langsung WhatsApp & Instagram -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="https://wa.me/088801765298" target="_blank" class="flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md transition duration-300">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Chat WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/titiaraekaa" target="_blank" class="flex items-center justify-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500 hover:opacity-90 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md transition duration-300">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f0fdf4] py-8 px-6 text-center border-t-2 border-emerald-200 text-gray-500 text-sm space-y-3">
+        <div class="flex justify-center gap-6 text-2xl text-teal-600">
+            <a href="https://wa.me/088801765298" target="_blank" title="WhatsApp" class="hover:text-emerald-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com/titiaraekaa" target="_blank" title="Instagram" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" title="GitHub" class="hover:text-teal-800 transition"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Tiara Eka Duwi Agustin © Portofolio PKL 2027</p>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const successAlert = document.getElementById('success-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successAlert.classList.remove('hidden');
+            contactForm.reset();
+
+            setTimeout(() => {
+                successAlert.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
